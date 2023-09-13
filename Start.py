@@ -74,4 +74,5 @@ def add_edit_recipe():
 
     return render_template('add_edit_recipe.html')
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0')
+
