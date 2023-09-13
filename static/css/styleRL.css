@@ -1,0 +1,244 @@
+/* Reset some default styles to ensure consistency across browsers */
+body, h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and font-family to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header/navigation bar */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Style the main content area */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Style the recipe list */
+.recipe-list {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-list h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.recipe-list p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Style the view button */
+.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+    background-color: #ffdb4d;
+}
+
+.delete-button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #eb3e3e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-size: 16px;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.heading h1{
+    color: #333;
+}
+.heading a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.recipe-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recipe-list li .recipe-heading{
+    text-align: initial;
+    width: 40%
+}
+
+/*for thumbnail in recipe list*/
+.recipe-thumbnail {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 5px; /* Add rounded corners */
+    margin-right: 20px; /* Adjust spacing between thumbnail and recipe details */
+}
+
+.recipe-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Style the search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#recipe-search {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 12px; /* Add some spacing between input and button */
+}
+
+#recipe-search::placeholder {
+    color: #999;
+}
+
+button {
+    padding: 13px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffdb4d;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .recipe-list li {
+        padding: 15px;
+    }
+
+    .recipe-list h3 {
+        font-size: 20px;
+    }
+
+    .recipe-list p {
+        font-size: 14px;
+    }
+
+    .view-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 5px 0;
+        font-size: 12px;
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #recipe-search {
+        margin-right: 0; /* Remove margin for smaller screens */
+        margin-bottom: 10px; /* Add some space between input and button */
+    }
+
+    button {
+        width: 100%; /* Make the button full width for smaller screens */
+    }
+}
+
+

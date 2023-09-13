@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleRL.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/recipe-list">Recipe List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="heading">
+            <h1>Recipe List</h1>
+            <div class="search-bar">
+            <input type="text" id="recipe-search" placeholder="Search recipes...">
+            <button onclick="searchRecipes()">Search</button>
+        </div>
+            <a href="/add-edit-recipe">Add / Edit Recipe</a>
+        </div>
+        <ul class="recipe-list">
+            {% for recipe in recipes %}
+                <li>
+                    <!-- Inside your <li> element for each recipe -->
+                    <div class="recipe-thumbnail">
+                        <img src="{{ url_for('static', filename=recipe.image) }}" alt="{{ recipe.title }}" class="recipe-thumbnail">
+                    </div>
+                    <div class="recipe-heading">
+                        <h3>{{ recipe.title }}</h3>
+                        <p><b>Ingredients: </b>{{ recipe.ingredients }}</p>
+                    </div>
+                    <div class="recipe-btn">
+                        <a href="/recipe/{{ recipe.id }}" class="view-button"><b>View Recipe</b></a>
+                        <button onclick="deleteRecipe({{ recipe.id }})" class="delete-button">Delete Recipe</button>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <script src="{{ url_for('static', filename='js/scriptRL.js') }}"></script>
+</body>
+</html>

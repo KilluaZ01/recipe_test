@@ -1,0 +1,132 @@
+/* Reset some default styles */
+body, h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and font-family to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Style the header/navigation bar */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Style the main content area */
+main {
+    padding: 20px;
+}
+
+/* Style the recipe form */
+.recipe-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.recipe-form input[type="text"],
+.recipe-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.recipe-form button[type="submit"] {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-form button[type="submit"]:hover {
+    background-color: #ffdb4d;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .recipe-form {
+        padding: 20px;
+    }
+
+    .recipe-form h2 {
+        font-size: 24px;
+    }
+
+    .recipe-form label {
+        font-size: 16px;
+    }
+
+    .recipe-form input[type="text"],
+    .recipe-form textarea {
+        font-size: 14px;
+    }
+
+    .recipe-form button[type="submit"] {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

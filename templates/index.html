@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book - Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleH.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/recipe-list">Recipe List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="welcome">
+            <h1>Welcome to the Recipe Book</h1>
+            <p>Here you will find the best recipe for the foods you would like to eat. Not just view the recipe but also can add your own recipe.</p>
+            <a href="/recipe-list" class="cta-button">View Recipes</a>
+        </div>
+        <div class="hero-img">
+            <img src="/static/images/food.jpg">
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/scriptH.js') }}"></script>
+</body>
+</html>
